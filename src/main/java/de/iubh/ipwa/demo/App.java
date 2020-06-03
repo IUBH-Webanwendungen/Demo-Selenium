@@ -20,7 +20,7 @@ public class App
         try {
             driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("Ente" + Keys.ENTER);
-            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>div")));
+            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("div.r>a>h3")));
             System.out.println(firstResult.getAttribute("textContent"));
         } finally {
             driver.quit();
